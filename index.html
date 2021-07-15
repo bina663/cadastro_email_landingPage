@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head lang='pt-br'>
+    <meta charset='utf-8'>
+    <link rel='stylesheet' href='style.css'>
+    <title>Cadastro</title>
+</head>
+<body>
+    <div class="left">
+        <section>
+            <div class="circle"></div><h3>Lorem ipsum</h3>
+        </section>
+        <div class="text-area">
+            <h1><span>Lorem</span><br>ipsum<br>dolor</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur necessitatibus dignissimos labore blanditiis similique consequatur sed magnam quo a repellendus maiores porro magni itaque iure molestias nesciunt est, doloribus laborum.</p>
+            <input type="text" name="" id="email" placeholder="E-mail">
+            <button onclick="envio()">Enviar</button><br>
+            <span id='text' class='erro'></span>
+        </div><!-- text-area -->
+    </div><!-- left -->
+    <div class="right">
+
+    </div><!-- right -->
+    <script>
+        function envio(){
+            let mail = document.getElementById('email').value;
+            let text = document.getElementById('text');
+            if(mail == ''){
+                text.innerHTML = 'Por favor coloque seu e-mail';
+            }else if(mail.indexOf('@') <= 0){
+                text.innerHTML = 'Por favor coloque um e-mail válido';
+            }else{
+                text.innerHTML = 'E-mail cadastrado com sucesso!';
+            }
+        }
+    </script>
+</body>
+</html>
+
+
