@@ -1,99 +1,95 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&display=swap');
 *{
-    margin:0px;
-    padding:0px;
+    margin:0;
+    padding:0;
     box-sizing:border-box;
+    font-family:'Nunito',sans-serif;
 }
-body{
-    height: 100vh;
-    display: flex;
-    flex-wrap: wrap;
-    font-family: 'Nunito',sans-serif;
-}
-.left{
-    width:60%;
+body,html{
     height:100%;
-    padding: 10px 50px;
-    background-color: rgb(247, 239, 240);
 }
-.left section{
-    padding:50px 0;
+nav{
+    padding:30px;
     display: flex;
-}
-#text{
-    position: relative;
-    top:10px;
-}
-section h3{
-    margin-left: 5px;
-}
-section h1{
-    font-size:1.8em;
+    align-items:center;
 }
 .circle{
-    width:20px;
-    height:20px;
-    padding:10px;
+    width:25px;
+    height:25px;
+    border:2px solid salmon;
     border-radius:100%;
-    border:2px solid rgb(221, 158, 168);
+}
+nav h1{
+    margin-left:5px;
+    font-size:1.0em;
+}
+.background{
+    background-image: url('../girl.jpg');
+    background-repeat:no-repeat;
+    background-position: center;
+    background-size: cover;
+    width:100%;
+    height:200px;
+    margin-bottom:100px;
+}
+main{
+    height:100%;
+    display:flex;
+    height:100%;
+    padding:0 60px;
+    align-items: center;
+    justify-content: center;
+    flex-direction:column;
+}
+main h1{
+    text-align:center;
+    font-size:2.5em;
+    letter-spacing: 13px;
+    text-transform: uppercase;
+    font-weight:200;
+    line-height:50px;
 }
 h1 span{
-    font-family: 'Libre Caslon Display', serif;
+    color:salmon;
+    font-weight:100;
 }
-.text-area h1{
-    font-size:3.5em;
-    line-height:60px;
-    letter-spacing:13px;
+main p{
+    margin:50px 0;
+    color:salmon;
+    font-weight:500;
+    line-height:30px;
 }
-.text-area p{
-    margin:35px 0px 50px 0px;
-    padding-right: 20px;
+section{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-.text-area input{
-    width:50%;
-    padding:16px 10px;
+section input{
+    width:100%;
+    padding:20px 18px;
+    border-radius: 30px;
+    outline:none;
+    border:1px solid salmon;
 }
-button{
-    padding:18px 25px;
+section button{
     position:relative;
-    right:5px;
-    background-color:rgb(221, 158, 168);
+    top:20px;
+    width:70%;
+    padding:20px 10px;
+    border-radius: 30px;
+    outline:none;
+    border:1px solid salmon;
+    background-image:linear-gradient(to right, salmon,rgb(212, 105, 93));
     color:#ffff;
-    border:none;
+    font-weight:700;
 }
-.right{
-    width:40%;
-    height:100%;
-    background-image: url('./girl.jpg');
-    background-size:cover;
-    background-repeat: none;
-    background-position:center;
+section p{
+    margin-top:25px;
 }
-@media screen and (max-width:990px){
-    body{
-        height:100%;
-    }
-    .right{
-        display:none;
-    }
-    .left{
-        width:100%;
-        height:100%;
-        padding:0;
-        background-image:url('./girl.jpg');
-        background-size:cover;
-        background-repeat: none;
-        background-position:center;
-        color:#ffff;
-    }
-    .text-area{
-        padding-bottom:50px;
-    }
-    .filter{
-        padding:15px 40px;
-        width:100%;
-        height:100%;
-        background-color:#14141485;
-    }
+p.green{
+    color:green;
+}
+p.red{
+    color:red;
 }

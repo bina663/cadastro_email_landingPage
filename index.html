@@ -1,42 +1,43 @@
-<!doctype html>
-<html>
-<head lang='pt-br'>
-    <meta charset='utf-8'>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel='stylesheet' href='style.css'>
-    <title>Cadastro</title>
+    <title>Cadastro de email</title>
 </head>
 <body>
-    <div class="left">
-        <div class='filter'>
+    <nav class='container'>
+        <div class="circle"></div>
+        <h1>Lorem<br>ipsum</h1>
+    </nav>
+    <div class="background"></div>
+    <main class="container">
+        <h1><span>Lorem</span><br>ipsum<br>dolor</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum voluptates quos nemo nihil ullam veritatis molestiae atque architecto a</p>
         <section>
-            <div class="circle"></div><h3>Lorem ipsum</h3>
+            <input type="text" id="submit" placeholder="E-mail">
+            <button onclick="envio()">Enviar</button>
+            <p id='info'></p>
         </section>
-        <div class="text-area">
-            <h1><span>Lorem</span><br>ipsum<br>dolor</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur necessitatibus dignissimos labore blanditiis similique consequatur sed magnam quo a repellendus maiores porro magni itaque iure molestias nesciunt est, doloribus laborum.</p>
-            <input type="text" name="" id="email" placeholder="E-mail">
-            <button onclick="envio()">Enviar</button><br>
-            <span id='text' class='erro'></span>
-        </div><!-- text-area -->
-        </div><!-- filter -->
-    </div><!-- left -->
-    <div class="right">
-
-    </div><!-- right -->
+    </main><!-- container -->
     <script>
         function envio(){
-            let mail = document.getElementById('email').value;
-            let text = document.getElementById('text');
+            let mail = document.getElementById('submit').value
+            let info = document.getElementById('info')
             if(mail == ''){
-                text.innerHTML = 'Por favor coloque seu e-mail';
-            }else if(mail.indexOf('@') <= 0){
-                text.innerHTML = 'Por favor coloque um e-mail válido';
+                info.className = 'red'
+                info.innerHTML = 'Por favor coloque seu e-mail'
+            }
+            else if(mail.indexOf('@') < 0){
+                info.className = 'red'
+                info.innerHTML = 'Por favor coloque um e-mail válido'
             }else{
-                text.innerHTML = 'E-mail cadastrado com sucesso!';
+                info.className = 'green'
+                info.innerHTML = 'Cadastro efetuado com sucesso'
             }
         }
     </script>
 </body>
 </html>
-
-
