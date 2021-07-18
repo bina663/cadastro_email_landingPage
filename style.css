@@ -24,13 +24,13 @@ nav h1{
     font-size:1.0em;
 }
 .background{
-    background-image: url('../girl.jpg');
+    background-image: url('../test.jpg');
     background-repeat:no-repeat;
+    background-position: top;
     background-size: cover;
-    object-fit: cover;
     width:100%;
     height:200px;
-    margin-bottom:150px;
+    margin-bottom:50px;
 }
 main{
     height:100%;
