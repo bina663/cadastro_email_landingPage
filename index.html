@@ -8,20 +8,23 @@
     <title>Cadastro de email</title>
 </head>
 <body>
-    <nav class='container'>
+    <div class="left">
+    <nav>
         <div class="circle"></div>
         <h1>Lorem<br>ipsum</h1>
     </nav>
     <div class="background"></div>
     <main class="container">
         <h1><span>Lorem</span><br>ipsum<br>dolor</h1>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum voluptates quos nemo nihil ullam veritatis molestiae atque architecto a</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum voluptates quos nemo nihil ullam veritatis molestiae atque.</p>
         <section>
             <input type="text" id="submit" placeholder="E-mail">
             <button onclick="envio()">Enviar</button>
-            <p id='info'></p>
         </section>
+        <p id='info'></p>
     </main><!-- container -->
+    </div><!-- left -->
+    <div class="right"></div>
     <script>
         function envio(){
             let mail = document.getElementById('submit').value
